@@ -1,0 +1,12 @@
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Domain/bin/Debug/net8.0/MyApp.Domain.deps.json
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Domain/bin/Debug/net8.0/MyApp.Domain.dll
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Domain/bin/Debug/net8.0/MyApp.Domain.pdb
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Domain/obj/Debug/net8.0/MyApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Domain/obj/Debug/net8.0/MyApp.Domain.AssemblyInfoInputs.cache
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Domain/obj/Debug/net8.0/MyApp.Domain.AssemblyInfo.cs
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Domain/obj/Debug/net8.0/MyApp.Domain.csproj.CoreCompileInputs.cache
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Domain/obj/Debug/net8.0/MyApp.Domain.sourcelink.json
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Domain/obj/Debug/net8.0/MyApp.Domain.dll
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Domain/obj/Debug/net8.0/refint/MyApp.Domain.dll
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Domain/obj/Debug/net8.0/MyApp.Domain.pdb
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Domain/obj/Debug/net8.0/ref/MyApp.Domain.dll
