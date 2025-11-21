@@ -3,9 +3,12 @@ using MyApp.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services
+// Read connection string
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+// Register MySQL DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 // Add controllers
 builder.Services.AddControllers();
