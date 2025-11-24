@@ -6,5 +6,6 @@ namespace MyApp.Domain.Entities
         public string Username { get; set; } = null!;
         public string Email { get; set; } = null!;
         public string PasswordHash { get; set; } = null!;
+        public DateTime? Birthdate {get; set;} = null!;
     }
 }
