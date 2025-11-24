@@ -2,8 +2,10 @@
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Infrastructure/bin/Debug/net8.0/MyApp.Infrastructure.runtimeconfig.json
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Infrastructure/bin/Debug/net8.0/MyApp.Infrastructure.dll
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Infrastructure/bin/Debug/net8.0/MyApp.Infrastructure.pdb
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Infrastructure/bin/Debug/net8.0/MyApp.Application.dll
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Infrastructure/bin/Debug/net8.0/MyApp.Domain.dll
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Infrastructure/bin/Debug/net8.0/MyApp.Domain.pdb
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Infrastructure/bin/Debug/net8.0/MyApp.Application.pdb
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Infrastructure/obj/Debug/net8.0/MyApp.Infrastructure.csproj.AssemblyReference.cache
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Infrastructure/obj/Debug/net8.0/MyApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.Infrastructure/obj/Debug/net8.0/MyApp.Infrastructure.AssemblyInfoInputs.cache

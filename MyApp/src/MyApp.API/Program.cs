@@ -1,25 +1,17 @@
 using Microsoft.EntityFrameworkCore;
 using MyApp.Infrastructure.Data;
-
+using MyApp.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
-// Read connection string
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddInfrastructure(builder.Configuration.GetConnectionString("DefaultConnection"));
 
-// Register MySQL DbContext
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
-
-// Add controllers
 builder.Services.AddControllers();
 
-// Add Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure middleware
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

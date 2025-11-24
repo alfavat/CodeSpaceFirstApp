@@ -1,32 +1,51 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using MyApp.Infrastructure.Data;
+using MyApp.Application.Interfaces;
 using MyApp.Domain.Entities;
 
-namespace MyApp.API.Controllers
+namespace MyApp.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class UsersController : ControllerBase
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class UsersController : ControllerBase
+    private readonly IUserService _service;
+
+    public UsersController(IUserService service)
     {
-        private readonly AppDbContext _context;
-        public UsersController(AppDbContext context)
-        {
-            _context = context;
-        }
+        _service = service;
+    }
 
-        [HttpGet]
-        public async Task<IEnumerable<User>> GetUsers()
-        {
-            return await _context.Users.ToListAsync();
-        }
+    [HttpGet]
+    public async Task<IActionResult> GetAll() =>
+        Ok(await _service.GetAllAsync());
 
-        [HttpPost]
-        public async Task<ActionResult<User>> CreateUser(User user)
-        {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetUsers), new { id = user.Id }, user);
-        }
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var User = await _service.GetByIdAsync(id);
+        return User is null ? NotFound() : Ok(User);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create(User User)
+    {
+        var created = await _service.CreateAsync(User);
+        return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, User User)
+    {
+        if (id != User.Id) return BadRequest();
+
+        await _service.UpdateAsync(User);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _service.DeleteAsync(id);
+        return NoContent();
     }
 }
