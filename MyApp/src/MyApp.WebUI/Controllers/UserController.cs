@@ -15,6 +15,11 @@ public class UserController : Controller
         _httpClientFactory = httpClientFactory;
     }
 
+    public IActionResult Register()
+    {
+        return View();
+    }
+
     public async Task<IActionResult> Index()
     {
         try
@@ -22,7 +27,7 @@ public class UserController : Controller
             var client = _httpClientFactory.CreateClient("ApiClient");
 
             var response = await client.GetAsync("api/Users");
-            response.EnsureSuccessStatusCode(); // Throws if the response is not 2xx
+            response.EnsureSuccessStatusCode();
 
             var content = await response.Content.ReadAsStringAsync();
 
