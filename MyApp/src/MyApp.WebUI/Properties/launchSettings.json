@@ -1,0 +1,14 @@
+﻿{
+  "profiles": {
+    "WebUI_HTTP": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://0.0.0.0:5247",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ApiBaseUrl": "http://localhost:5254"
+      }
+    }
+  }
+}

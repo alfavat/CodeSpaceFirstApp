@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-api",
+      "command": "dotnet",
+      "type": "process",
+      "args": ["build", "${workspaceFolder}/MyApp/src/MyApp.API/MyApp.API.csproj"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build-webui",
+      "command": "dotnet",
+      "type": "process",
+      "args": ["build", "${workspaceFolder}/MyApp/src/MyApp.WebUI/MyApp.WebUI.csproj"],
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}

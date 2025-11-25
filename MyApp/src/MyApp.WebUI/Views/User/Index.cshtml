@@ -1,0 +1,35 @@
+@using MyApp.WebUI.ViewModels.User
+@model List<UserViewModel>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h1 class="mt-4">Users</h1>
+
+@if (Model == null || Model.Count == 0)
+{
+    <div class="alert alert-info mt-3">
+        No users found.
+    </div>
+}
+else
+{
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
