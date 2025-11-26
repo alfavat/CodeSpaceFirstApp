@@ -1,4 +1,4 @@
-namespace MyApp.WebUI.ViewModels.User;
+namespace MyApp.WebUI.Models.User;
 
 public class UserViewModel
 {

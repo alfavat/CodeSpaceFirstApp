@@ -2,7 +2,7 @@ using System.Diagnostics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
-using MyApp.WebUI.ViewModels.User;
+using MyApp.WebUI.Models.User;
 
 namespace MyApp.WebUI.Controllers;
 
@@ -18,6 +18,12 @@ public class UserController : Controller
     public IActionResult Register()
     {
         return View();
+    }
+
+    [HttpPost]
+    public IActionResult Register(RegisterViewModel model)
+    {
+        return View(model);
     }
 
     public async Task<IActionResult> Index()

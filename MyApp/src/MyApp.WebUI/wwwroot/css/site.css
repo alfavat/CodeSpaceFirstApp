@@ -20,3 +20,202 @@ html {
 body {
   margin-bottom: 60px;
 }
+.field-validation-error {
+	color: red;
+}
+
+#datepicker {
+	width: calc(100% - 18px);
+}
+
+.register{
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    margin-top: 3%;
+    padding: 3%;
+}
+.register-left{
+    text-align: center;
+    color: #fff;
+    margin-top: 4%;
+}
+.register-left input{
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    width: 60%;
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #383d41;
+    margin-top: 30%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.register-right{
+    background: #f8f9fa;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+}
+.register-left img{
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 25%;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+.register-left p{
+    font-weight: lighter;
+    padding: 12%;
+    margin-top: -9%;
+}
+.register .register-form{
+    padding: 10%;
+    margin-top: 10%;
+}
+.btnRegister{
+    float: right;
+    margin-top: 10%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+.btnLogin {
+    margin-top: 10%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 81%;
+    cursor: pointer;
+}
+.register .nav-tabs{
+    margin-top: 3%;
+    border: none;
+    background: #0062cc;
+    border-radius: 1.5rem;
+    width: 28%;
+    float: right;
+}
+.register .nav-tabs .nav-link{
+    padding: 2%;
+    height: 34px;
+    font-weight: 600;
+    color: #fff;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.register .nav-tabs .nav-link:hover{
+    border: none;
+}
+.register .nav-tabs .nav-link.active{
+    width: 100px;
+    color: #0062cc;
+    border: 2px solid #0062cc;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.register-heading{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -15%;
+    color: #495057;
+}
+/* --- Custom Datepicker Theme: Silver / Dark-Red Accent / Large Cells --- */
+
+/* Main container background */
+.datepicker {
+    background-color: #f2f2f5;          /* light silver */
+    border: 1px solid #c4c7cc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    color: #4a4d55;                    /* soft charcoal */
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Header (month/year area) */
+.datepicker .datepicker-title {
+    background-color: #8b0000;         /* DARK RED */
+    color: white;
+    padding: 0.6rem;
+    font-size: 1.1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.datepicker .prev-btn,
+.datepicker .next-btn {
+    color: #ffffff;
+}
+
+.datepicker .prev-btn:hover,
+.datepicker .next-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Weekday labels */
+.datepicker .datepicker-weekday {
+    color: #6b7280; /* soft steel gray */
+    font-weight: 600;
+}
+
+/* Bigger cells */
+.datepicker .datepicker-cell {
+    width: 3rem !important;
+    height: 3rem !important;
+    line-height: 3rem !important;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4a4d55; /* soft charcoal */
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.datepicker .datepicker-cell:hover {
+    background-color: #f5e4e4;         /* very light red tint */
+    color: #5b0b0b;                    /* muted dark red-gray */
+    cursor: pointer;
+}
+
+/* Today highlight */
+.datepicker .datepicker-cell.today {
+    background-color: #f0d4d4;         /* soft rosy tint */
+    color: #6b1a1a;                    /* deep warm red-gray */
+    font-weight: 600;
+}
+
+/* Selected date */
+.datepicker .datepicker-cell.selected,
+.datepicker .datepicker-cell.selected:hover {
+    background-color: #8b0000 !important; /* DARK RED MAIN */
+    color: white !important;
+    border-radius: 6px;
+}
+
+/* Disabled dates */
+.datepicker .datepicker-cell.disabled {
+    color: #a8aabb !important;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* spacing */
+.datepicker .datepicker-days,
+.datepicker .datepicker-weekdays {
+    padding: 0.6rem;
+}
