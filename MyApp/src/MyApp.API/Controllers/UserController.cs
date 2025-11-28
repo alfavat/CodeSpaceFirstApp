@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using MyApp.API.Models;
 using MyApp.Application.Interfaces;
+using MyApp.Domain.Dtos;
 using MyApp.Domain.Entities;
 
 namespace MyApp.API.Controllers;
@@ -27,10 +29,21 @@ public class UsersController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(User User)
+    public async Task<IActionResult> Create(UserRegisterDto user)
     {
-        var created = await _service.CreateAsync(User);
-        return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+        if (user == null)
+        {
+            return NotFound(ApiResponse.Failure("User data is null"));
+        }
+
+        var created = await _service.CreateAsync(user);
+
+        if (created)
+        {
+            return Ok(ApiResponse.Ok(message: "User created successfully"));
+        }
+
+        return BadRequest(ApiResponse.Failure("User creation failed"));
     }
 
     [HttpPut("{id}")]

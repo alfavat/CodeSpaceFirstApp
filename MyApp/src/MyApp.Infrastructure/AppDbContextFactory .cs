@@ -9,9 +9,9 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
 
-        var connectionString = "Server=sql7.freesqldatabase.com;Port=3306;Database=sql7808853;User=sql7808853;Password=n5hAXMNbqy;";
+        var connectionString = @"Server=sql.bsite.net\MSSQL2016;Database=qartal_test;User=qartal_test;Password=Azadi@1414;";
 
-        optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+        optionsBuilder.UseSqlServer(connectionString);
 
 
         return new AppDbContext(optionsBuilder.Options);

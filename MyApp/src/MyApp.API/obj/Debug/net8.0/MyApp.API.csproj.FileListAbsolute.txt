@@ -1,3 +1,11 @@
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.csproj.AssemblyReference.cache
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.AssemblyInfoInputs.cache
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.AssemblyInfo.cs
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.csproj.CoreCompileInputs.cache
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.MvcApplicationPartsAssemblyInfo.cs
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.MvcApplicationPartsAssemblyInfo.cache
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.sourcelink.json
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/appsettings.Development.json
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/appsettings.json
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/MyApp.API
@@ -5,6 +13,8 @@
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/MyApp.API.runtimeconfig.json
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/MyApp.API.dll
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/MyApp.API.pdb
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/AutoMapper.dll
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/Humanizer.dll
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
@@ -17,6 +27,10 @@
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Design.dll
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/Microsoft.OpenApi.dll
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/Mono.TextTemplating.dll
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/MySqlConnector.dll
@@ -90,14 +104,6 @@
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/MyApp.Domain.pdb
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/MyApp.Infrastructure.pdb
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/bin/Debug/net8.0/MyApp.Application.pdb
-/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.csproj.AssemblyReference.cache
-/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.GeneratedMSBuildEditorConfig.editorconfig
-/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.AssemblyInfoInputs.cache
-/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.AssemblyInfo.cs
-/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.csproj.CoreCompileInputs.cache
-/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.MvcApplicationPartsAssemblyInfo.cs
-/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.MvcApplicationPartsAssemblyInfo.cache
-/workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/MyApp.API.sourcelink.json
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/staticwebassets.build.json
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/staticwebassets.development.json
 /workspaces/CodeSpaceFirstApp/MyApp/src/MyApp.API/obj/Debug/net8.0/staticwebassets/msbuild.MyApp.API.Microsoft.AspNetCore.StaticWebAssets.props

@@ -1,12 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using MyApp.Infrastructure;
+using MyApp.Application;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddInfrastructure(builder.Configuration.GetConnectionString("DefaultConnection")?? "");
 
+InitializeConfigurations.Initialize(builder.Services);
+
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
@@ -18,6 +22,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseAuthorization();
+
 app.MapControllers();
+
 app.Run();

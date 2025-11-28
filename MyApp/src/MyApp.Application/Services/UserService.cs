@@ -1,14 +1,17 @@
 using MyApp.Application.Interfaces;
+using MyApp.Domain.Dtos;
 using MyApp.Domain.Entities;
 using MyApp.Domain.Interfaces;
+using AutoMapper;
 
 namespace MyApp.Application.Services;
 
 public class UserService : IUserService
 {
     private readonly IRepository<User> _repo;
+    private readonly IMapper _mapper;
 
-    public UserService(IRepository<User> repo)
+    public UserService(IRepository<User> repo, IMapper mapper)
     {
         _repo = repo;
     }
@@ -19,7 +22,14 @@ public class UserService : IUserService
 
     public Task<User?> GetByIdAsync(int id) => _repo.GetByIdAsync(id);
 
-    public Task<User> CreateAsync(User User) => _repo.AddAsync(User);
+    public async Task<bool> CreateAsync(UserRegisterDto dto)
+    {
+        var item = _mapper.Map<User>(dto);
+
+        var createdItem = await _repo.AddAsync(item);
+
+        return createdItem != null && createdItem.Id > 0 ;
+    }
 
     public async Task UpdateAsync(User User)
     {

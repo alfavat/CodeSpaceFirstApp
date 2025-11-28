@@ -1,9 +1,7 @@
-namespace MyApp.Domain.Entities
+namespace MyApp.Domain.Dtos
 {
-    public class User
+    public class UserRegisterDto
     {
-        public int Id { get; set; }
-
         public string FirstName { get; set; } = null!;
 
         public string LastName { get; set; } = null!;
@@ -12,8 +10,8 @@ namespace MyApp.Domain.Entities
 
         public string Email { get; set; } = null!;
 
-        public string PasswordHash { get; set; } = null!;
+        public string Password { get; set; } = null!;
 
-        public DateTime? Birthdate { get; set; } = null;
+        public DateTime? Birthdate {get; set;} = null!;
     }
 }
