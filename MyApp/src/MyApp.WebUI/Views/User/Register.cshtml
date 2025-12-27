@@ -1,15 +1,12 @@
 @model MyApp.WebUI.Models.User.RegisterViewModel
 
 @{
-    ViewBag.Title = "Register";
+    ViewData["Title"] = "Register";
 }
 
-@using (Html.BeginForm("Register", "User", FormMethod.Post))
-{
+<form asp-action="Register" asp-controller="User" method="post">
     <div class="container register">
         <div class="row">
-
-            <!-- Left Column -->
             <div class="col-md-3 register-left">
                 <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
                 <h3>Welcome Dear Users</h3>
@@ -19,107 +16,83 @@
                 </p>
             </div>
 
-            <!-- Right Column -->
             <div class="col-md-9 register-right">
-
-                <!-- Tabs -->
-                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <ul class="nav nav-tabs nav-justified" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active"
-                           id="home-tab"
-                           data-toggle="tab"
-                           href="../User/Register"
-                           role="tab"
-                           aria-controls="home"
-                           aria-selected="true">
+                        <a class="nav-link active" asp-controller="User" asp-action="Register">
                             Register
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link"
-                           id="profile-tab"
-                           data-toggle="tab"
-                           href="../User/Login"
-                           role="tab"
-                           aria-controls="profile"
-                           aria-selected="false">
+                        <a class="nav-link" asp-controller="User" asp-action="Login">
                             Login
                         </a>
                     </li>
                 </ul>
 
-                <!-- Tab Content -->
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active"
-                         id="home"
-                         role="tabpanel"
-                         aria-labelledby="home-tab">
-
+                <div class="tab-content">
+                    <div class="tab-pane fade show active">
                         <h3 class="register-heading">Register New User</h3>
 
                         <div class="row register-form">
-
-                            <!-- Left Inputs -->
                             <div class="col-md-6">
+
                                 <div class="form-group m-2">
-                                    @Html.TextBoxFor(e => e.FirstName, new { @class = "form-control", placeholder = "First Name *" })
-                                    @Html.ValidationMessageFor(e => e.FirstName)
+                                    <input asp-for="FirstName" class="form-control" placeholder="First Name *" />
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-group m-2">
-                                    @Html.TextBoxFor(e => e.LastName, new { @class = "form-control", placeholder = "Last Name *" })
-                                    @Html.ValidationMessageFor(e => e.LastName)
+                                    <input asp-for="LastName" class="form-control" placeholder="Last Name *" />
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
                                 </div>
-                                
+
                                 <div class="form-group m-2">
-                                    @Html.TextBoxFor(e => e.Email, new { @class = "form-control", @type="email", placeholder = "Your Email *" })
-                                    @Html.ValidationMessageFor(e => e.Email)
+                                    <input asp-for="Email" class="form-control" type="email"
+                                        placeholder="Your Email *" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
                                 </div>
                             </div>
 
-                            <!-- Right Inputs -->
                             <div class="col-md-6">
-                            <div class="m-2 input-group date" id="datepicker">
-                                <input type="text" class="form-control" id="date"/>
-                                <span class="input-group-append">
-                                    <span class="input-group-text bg-light d-block">
-                                        <i class="fa fa-calendar"></i>
+
+                                <div class="m-2 input-group date" id="datepicker">
+                                    <input asp-for="BirthDate" type="text" class="form-control" id="date" />
+                                    <span class="input-group-append">
+                                        <span class="input-group-text bg-light d-block">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
                                     </span>
-                                </span>
-                            </div>
-                                @* <div class="form-group m-2">
-                                    @Html.TextBoxFor(e => e.BirthDate, new { @class = "form-control", placeholder = "Your Birth Date *" })
-                                    @Html.ValidationMessageFor(e => e.BirthDate)
-                                </div> *@
-
-                                <div class="form-group m-2">
-                                    @Html.PasswordFor(e => e.Password, new { id = "password", @class = "form-control", placeholder = "Password *" })
-                                    <span id="result"></span>
-                                    @Html.ValidationMessageFor(e => e.Password)
                                 </div>
 
                                 <div class="form-group m-2">
-                                    @Html.PasswordFor(e => e.ConfirmPassword, new { @class = "form-control", placeholder = "Confirm Password *" })
-                                    @Html.ValidationMessageFor(e => e.ConfirmPassword)
+                                    <input asp-for="Password" class="form-control" placeholder="Password *" />
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group m-2">
+                                    <input asp-for="ConfirmPassword" class="form-control"
+                                        placeholder="Confirm Password *" />
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                                 </div>
 
                                 <input type="submit" class="btnRegister" value="Register" />
                             </div>
+                        </div>
 
-                        </div> <!-- row register-form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
 
-                    </div> <!-- tab-pane -->
-                </div> <!-- tab-content -->
-
-            </div> <!-- col-md-9 register-right -->
-
-        </div> <!-- row -->
-    </div> <!-- container -->
-}
 @section Scripts {
-    <script type="text/javascript">
+    <partial name="_ValidationScriptsPartial" />
+    <script>
         $(function () {
+            console.log('Datepicker initialized');
             $('#datepicker').datepicker({
                 format: "dd/mm/yyyy",
                 autoclose: true,
